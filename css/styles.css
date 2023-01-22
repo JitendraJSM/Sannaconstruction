@@ -1,0 +1,509 @@
+/* ========================================= */
+/* ================ HEADER ================  */
+/* ========================================= */
+
+.header {
+  position: relative;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.6rem 0;
+}
+/* Sticky navigation */
+.sticky .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.sticky #hero {
+  margin-top: 7.9rem;
+}
+/* === Desktop NAVIGATION apllied when width > 992px === */
+.header-logo-box {
+  margin-right: auto;
+}
+.header-logo {
+}
+.navigation,
+.nav-list {
+  flex-direction: row;
+  align-items: center;
+}
+.nav-list {
+  font-size: 1.4rem;
+  position: static;
+  gap: 2.4rem;
+  padding-block: 0;
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+.nav-list li {
+  /* margin-inline: 0; */
+}
+.btn-mobile-nav {
+  display: none;
+}
+
+/* === Desktop NAVIGATION END === */
+
+/* ============================================== */
+/* ================ HERO SLIDER ================  */
+/* ============================================== */
+.about-us-slider,
+.image-slider {
+  position: relative;
+  overflow: hidden;
+}
+.slide img {
+  height: 845px;
+}
+.about-us-slide img,
+.slide img {
+  -webkit-animation-name: zoomin;
+  -webkit-animation-duration: 20s;
+  animation-name: zoomin;
+  animation-duration: 20s;
+}
+@-webkit-keyframes zoomin {
+  from {
+    transform: scale(1, 1);
+  }
+  to {
+    transform: scale(1.5, 1.5);
+  }
+}
+
+@keyframes zoomin {
+  from {
+    transform: scale(1, 1);
+  }
+  to {
+    transform: scale(1.5, 1.5);
+  }
+}
+.t-prev,
+.t-next,
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  transition: 0.2s;
+  user-select: none;
+}
+.prev,
+.next {
+  font-size: 5rem;
+  padding: 1.5rem;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.09);
+  transform: translate(0, -50%);
+}
+.t-prev {
+  left: -10rem;
+}
+.t-next {
+  right: -10rem;
+}
+.t-prev,
+.t-next {
+  font-size: 2rem;
+  font-weight: 700;
+  width: 5rem;
+  height: 5rem;
+  background-color: #ffb600;
+  border-radius: 50%;
+}
+.t-prev:hover,
+.t-next:hover {
+  color: #ffb600;
+  background-color: #f9f9f9;
+}
+.prev:hover,
+.next:hover {
+  color: #ffb600;
+}
+.next {
+  right: 0;
+}
+.dots-box {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 2rem;
+  cursor: pointer;
+}
+.dot {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 0.3rem solid #fff;
+  border-radius: 50%;
+  margin: 0 1.6rem;
+  cursor: pointer;
+}
+.active,
+.dot:hover {
+  border: 3px solid #ffb600;
+  background-color: #ffb700a1;
+}
+/* ===== Hero-Text-positioning ===== */
+.title-container {
+  color: #fff;
+  border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+.title-container {
+  background-color: hsla(0, 0%, 0%, 0.753);
+  padding: 1.6rem;
+}
+.title-container > * {
+  color: #fff;
+  white-space: nowrap;
+}
+.title-container.slide-1 {
+  left: 50%;
+  text-align: center;
+}
+.title-container.slide-2 {
+  left: 40%;
+}
+.title-container.slide-3 {
+  left: 60%;
+  text-align: right;
+}
+.title-container .btn {
+  margin: 0;
+  display: inline-block;
+}
+.title-container .btn.btn-empty {
+  margin-right: 1.6rem;
+}
+/* ===== Hero-Text-positioning ===== */
+.sub-title {
+  font-size: min(calc(1.5vw + 1rem), 3.2rem);
+  /* font-size: 1rem; */
+  font-weight: 300;
+}
+.title {
+  font-size: min(calc(3.2vw + 1.3rem), 5.2rem);
+  margin-block: 1.5rem;
+}
+.slide-3 .sub-title {
+  font-size: min(calc(1.3vw + 1rem), 3.2rem);
+}
+.slide-3 .title {
+  font-size: min(calc(3vw + 1.3rem), 4.4rem);
+}
+.title-container .btn {
+  font-size: min(calc(0.8vw + 1rem), 1.8rem);
+}
+.title,
+.sub-title {
+  white-space: nowrap;
+}
+.slide-2 .title-desc:first-child {
+  margin-bottom: 1rem;
+}
+.slide-1 .title-desc {
+  justify-content: center;
+}
+.slide-3 .title-desc {
+  justify-content: flex-end;
+}
+/* ================================================= */
+/* ================ CALL TO ACTION ================  */
+/* ================================================= */
+#call-to-action {
+  padding-block: 2.4rem;
+}
+#call-to-action-btn {
+  margin-left: auto;
+}
+
+/* ================================================= */
+/* ================ SHORT ABOUT US ================  */
+/* ================================================= */
+
+#about-us > * {
+  flex: 1 1 450px;
+}
+#about-us .subheading {
+  text-align: left;
+}
+.about-us-heading {
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+#about-us p {
+  margin-top: 1.6rem;
+}
+/* .service-img-box, */
+.service-image,
+.library-image,
+.about-us-image {
+  width: min(100%, 53.4rem);
+  /* height: 100%; */
+}
+.achievement {
+  flex: 1 1 200px;
+  max-width: 400px;
+}
+.achievements {
+  gap: 1rem;
+  margin-block: 2.4rem;
+  line-height: 1.2;
+}
+.achievement h4 {
+  text-align: left;
+}
+/* ================ about-us-slider ================  */
+.about-us-slide {
+  display: none;
+}
+.about-us-slide img {
+  height: 300px;
+}
+.about-us-title {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  background-color: hsla(0, 0%, 0%, 0.753);
+  color: #fff;
+  border-radius: 3px;
+  position: absolute;
+  bottom: 4%;
+  padding: 1.2rem;
+  left: 50%;
+  z-index: 9;
+}
+
+/* =========================================== */
+/* ================ COUNTERS ================  */
+/* =========================================== */
+.counters {
+  background-color: #e2e2e2;
+}
+/* ================================================= */
+/* ================ DESIGN LIBRARY ================  */
+/* ================================================= */
+
+.library-grid {
+  text-align: center;
+}
+.reason-box,
+.step-card,
+.library-image-box,
+.service-box {
+  flex: 1 1 320px;
+}
+.library-image-box > a {
+  display: inline-block;
+  /* height: 100%; */
+}
+
+.more-images {
+  margin-top: 4.4rem;
+  text-align: center;
+}
+
+/* ============================================ */
+/* ================ MUST KNOW ================  */
+/* ============================================ */
+#join-us,
+#must-know {
+  padding: 0;
+  gap: 0;
+}
+.join-us-logo-box,
+.must-know-image-box {
+  flex: 1 1 359px;
+  text-align: right;
+  padding: 2rem 3.2rem;
+}
+.join-us-text-box,
+.must-know-text-box {
+  padding: 2rem 3.2rem;
+  flex: 1 1 633px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.must-know-title.underline::after {
+  bottom: -25%;
+  left: 8% !important;
+  width: 15%;
+}
+.quote {
+  color: #ffb600;
+  margin-left: 3.2rem;
+}
+
+/* =========================================== */
+/* ================ SERVICES ================  */
+/* =========================================== */
+.service-grid {
+  justify-content: center;
+}
+.service-img-box {
+  /* .service-image { */
+  margin-bottom: 1.2rem;
+}
+.reason-box,
+.service-description {
+  padding: 0 1rem 0.4rem;
+  margin-top: 0.8rem;
+  margin-bottom: 1.4rem;
+  text-align: justify;
+}
+
+/* =============================================== */
+/* ================ HOW IT WORKS ================  */
+/* =============================================== */
+.how-to-grid {
+  gap: 3.2rem;
+}
+.team-card,
+.step-card {
+  border-radius: 9px;
+  background-color: #fff;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.09);
+  padding: 3.2rem;
+}
+.step-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+.step-title > * {
+  font-size: 2.4rem;
+  margin-top: 0;
+}
+.colorfull {
+  color: #ffb600;
+}
+.step-number {
+  font-weight: 600;
+  opacity: 0.5;
+}
+
+/* ========================================= */
+/* ================ WHY US ================  */
+/* ========================================= */
+#why-us .underline::after {
+  width: 8%;
+}
+.why-us-grid {
+  margin-top: 3.2rem;
+}
+
+.reason-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.6rem;
+}
+.reason-title .icon {
+  margin-right: 2.4rem;
+}
+.reason-box p {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* ========================================== */
+/* ================ JOIN US ================  */
+/* ========================================== */
+.join-us-logo-box {
+  background-color: #ffb600;
+}
+
+/* =============================================== */
+/* ================ TESTIMONIALS ================  */
+/* =============================================== */
+/* =========================================== */
+/* ================ OUR TEAM ================  */
+/* =========================================== */
+/* ========================================= */
+/* ================ FOOTER ================  */
+/* ========================================= */
+footer {
+  padding: 3.2rem 0;
+  background-color: #23282d;
+}
+.footer-logo-box {
+  flex: 1 1 200px;
+  max-width: 320px;
+}
+.footer-links-box {
+  flex: 1 1 448px;
+  gap: 0;
+}
+.footer-links-box > li {
+  flex: 1 1 212px;
+  max-width: 234px;
+}
+.footer-link {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+}
+.footer-logo-box {
+  padding: 0 0 0;
+  text-align: center;
+}
+.footer-logo-box img {
+  display: inline-block;
+}
+.social-icons-box {
+  margin-top: 0.8rem;
+  fill: #fff;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* ================ COPYRIGHT ================  */
+#copyright {
+  border: none;
+  background-color: #ffb600;
+  font-size: 12px;
+  color: #222;
+  text-align: right;
+  padding: 0.4rem 1rem;
+  margin: 0;
+}
+.overlay-btn-wrapper {
+  position: fixed;
+  inset: auto 10px 20px auto;
+  flex-direction: column;
+  gap: max(4px, 1rem);
+}
+.overlay-btn {
+  border: none;
+  background-color: #000;
+  border-radius: 9px;
+
+  width: 35px;
+  height: 35px;
+}
+#back-to-top {
+  color: #ffb600;
+  font-weight: 800;
+  writing-mode: vertical-lr;
+}
+/* ============================== */
+/* ======== Testimonials ======== */
+/* ============================== */
+#testimonials {
+  background-color: violet;
+}
+.rewiew-wrapper {
+  min-height: 300px;
+}
+blockquote {
+  font-size: 1.8rem;
+  color: #fff;
+}
